@@ -1,0 +1,69 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+*.env
+*.venv
+
+# Django stuff
+db.sqlite3
+*.sqlite3
+/media/
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.coverage
+htmlcov/
+*.mo
+*.pid
+*.seed
+*.tox
+*.log
+
+# Migrations
+**/migrations/__pycache__/
+**/migrations/*.pyc
+**/migrations/*.py
+
+# Static and media files
+staticfiles/
+media/
+static/
+
+# VSCode & JetBrains IDEs
+.vscode/
+.idea/
+*.iml
+
+# MacOS & Linux system files
+.DS_Store
+Thumbs.db
+
+# Pip environment files
+Pipfile
+Pipfile.lock
+
+# Celery beat scheduler files
+celerybeat-schedule
+
+# Ignore coverage reports
+.coverage
+.coverage.*
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Ignore pytest cache
+.pytest_cache/
+
+# Ignore Docker files (if using Docker)
+docker-compose.override.yml
+.envrc
