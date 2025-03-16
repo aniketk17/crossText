@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use CrossText</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/use.css' %}">
+</head>
+
+<body>
+    
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <i class="fas fa-share-nodes"></i> CrossText
+        </a>
+        <div class="navbar-links">
+            <a href="{% url 'index' %}" class="navbar-link">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="{% url 'how_to_use' %}" class="navbar-link active">
+                <i class="fas fa-book"></i> How to Use
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="guide-header">
+            <div class="guide-title">How to Use CrossText</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <i class="fas fa-rocket"></i> Getting Started
+            </div>
+            <ol class="steps">
+                <li>Open CrossText in your browser</li>
+                <li>You'll be assigned a random username automatically</li>
+                <li>Check that your status shows <span class="bold">"Connected"</span> at the top of the page</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <i class="fas fa-share-alt"></i> Sharing Text
+            </div>
+            <ol class="steps">
+                <li>Type or paste text in the <span class="bold">Clipboard</span> section</li>
+                <li>To send to one person:
+                    <ul>
+                        <li>Hover over a user bubble in the <span class="bold">Nearby Users</span> area</li>
+                        <li>Click the <span class="bold">Paste</span> button that appears</li>
+                    </ul>
+                </li>
+                <li>To send to everyone:
+                    <ul>
+                        <li>Click the <span class="bold">Broadcast to All</span> button</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <i class="fas fa-inbox"></i> Receiving Text
+            </div>
+            <ul class="steps">
+                <li>When someone sends you text, it appears in the <span class="bold">Received Text</span> box</li>
+                <li>The sender's name appears above the message</li>
+                <li>You can select and copy text from this box to use elsewhere</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <i class="fas fa-tools"></i> Troubleshooting
+            </div>
+            <ul class="steps">
+                <li>If disconnected, refresh the page</li>
+                <li>Allow location access if prompted by your browser</li>
+                <li>Make sure your internet connection is working</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to CrossText
+        </a>
+    </div>
+</body>
+
+</html>

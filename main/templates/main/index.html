@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrossText - Proximity Clipboard Sharing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <i class="fas fa-share-nodes"></i> CrossText
+        </a>
+        <div class="navbar-links">
+            <a href="{% url 'index' %}" class="navbar-link">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="{% url 'how_to_use' %}" class="navbar-link active">
+                <i class="fas fa-book"></i> How to Use
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="status-panel">
+            <div class="status-item">
+                <i class="fas fa-user"></i>
+                Your Username: <span id="username">Connecting...</span>
+            </div>
+            <div class="status-item">
+                <i class="fas fa-signal"></i>
+                Status: <span id="connection-status" class="status-connecting">Connecting...</span>
+            </div>
+            <div class="status-item">
+                <i class="fas fa-location-dot"></i>
+                Location: <span id="location-status">Detecting...</span>
+            </div>
+        </div>
+
+        <div id="users-area">
+            <div class="card">
+                <h2 class="card-title"><i class="fas fa-users"></i> Nearby Users</h2>
+                <div id="users-container">
+                    <div class="dots" id="backgroundDots"></div>
+                    <div class="floating-info">
+                        <i class="fas fa-info-circle"></i>
+                        <span id="user-count">0 users nearby</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clipboard-section">
+            <div class="card">
+                <h2 class="card-title"><i class="fas fa-clipboard"></i> Your Clipboard</h2>
+                <div class="input-group">
+                    <textarea id="clipboard" placeholder="Type or paste text here that you want to share..."></textarea>
+                    <div class="button-group">
+                        <button class="btn-primary" id="broadcast-button">
+                            <i class="fas fa-broadcast-tower"></i> Broadcast to All
+                        </button>
+                        <button class="btn-secondary" id="copy-button">
+                            <i class="fas fa-copy"></i> Copy to Device
+                        </button>
+                        <button class="btn-secondary" id="clear-button">
+                            <i class="fas fa-eraser"></i> Clear
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title"><i class="fas fa-inbox"></i> Received Text</h2>
+                <div id="received-content">
+                    <div class="received-header">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="sender-info">No messages received yet</span>
+                    </div>
+                    <div id="received-text" class="received-message received-empty">
+                        Messages from other users will appear here
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-share-nodes"></i>
+                        <span>CrossText</span>
+                    </div>
+                    <p><i class="fas fa-map-marker-alt"></i> Pune Institute of Computer Technology, Pune, Dhankawadi-43</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3><i class="fas fa-link"></i> Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="how-to-use.html"><i class="fas fa-book"></i> How to Use</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3><i class="fas fa-question-circle"></i> Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-life-ring"></i> Help Center</a></li>
+                        <li><a href="#"><i class="fas fa-bug"></i> Report a Bug</a></li>
+                        <li><a href="#"><i class="fas fa-lightbulb"></i> Feature Request</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CrossText. All rights reserved. | Proximity Clipboard Sharing</p>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
