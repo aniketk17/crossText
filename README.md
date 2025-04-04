@@ -1,5 +1,12 @@
 # crossText 📍📲⇄💻  
-*Share text across devices within a 100m radius – like a local-network clipboard!*  
+*Share text across devices within a 100m radius – like a local-network clipboard!*
+
+## 📸 Quick Look
+
+<div align="center">
+  <img src="https://github.com/aniketk17/crossText/blob/dev/Screenshot%20from%202025-04-04%2015-21-09.png?raw=true" alt="UI Overview" width="80%">
+</div>
+
 
 **Key Features**:  
 - 🔄 **Real-time sync**: Instantly share text snippets between devices.  
